@@ -6,8 +6,8 @@ import java.util.Stack;
 
 public class BTZigzagLevelOrderTraversal {
 
-	public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
-	    ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();    
+	public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+		List<List<Integer>> result = new ArrayList<List<Integer>>();    
 		
 	    if (root == null) {
 			return result;
@@ -34,6 +34,13 @@ public class BTZigzagLevelOrderTraversal {
 					if (node.right != null) {
 						nextLevel.push(node.right);
 						
+					}
+				} else {
+					if (node.right != null) {
+						nextLevel.push(node.right);
+					}
+					if (node.left != null) {
+						nextLevel.push(node.left);
 					}
 				}
 			}
