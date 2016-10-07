@@ -11,9 +11,10 @@ Determine if you are able to reach the last index.
  */
 public class JumpGame {
 
+	// dynamic programming
 	public boolean canJump(int[] nums){
 		// think it as merging n intervals
-		if (nums == null || nums.length == 0) {
+		if (nums == null || nums.length == 0 || nums[0] == 0) {
 			return false;
 		}
 		int farthest = nums[0];
@@ -26,7 +27,7 @@ public class JumpGame {
 	}
 	
 	
-	// O(n)
+	//Greedy. O(n)
 	public boolean canJump2(int[] nums) {
         boolean[] can = new boolean[nums.length];
         can[0] = true;
