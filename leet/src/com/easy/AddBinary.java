@@ -1,5 +1,10 @@
 package com.easy;
 
+/**
+ * Given two binary strings, return their sum (also a binary string).
+ * @author yue
+ *
+ */
 public class AddBinary {
 
 	public static void main(String[] args) {
@@ -14,6 +19,8 @@ public class AddBinary {
 			a = b;
 			b = tmp;
 		}
+		
+		// Now String a is longer than String b
 		
 		int pa = a.length() - 1;
 		int pb = b.length() - 1;
