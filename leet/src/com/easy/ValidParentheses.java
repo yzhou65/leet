@@ -3,15 +3,19 @@ package com.easy;
 import java.util.Stack;
 
 /**
- * Given a string containing just the characters '(', ')', '{', '}', '[' and ']', 
+ * Given a string containing only the characters '(', ')', '{', '}', '[' and ']', 
  * determine if the input string is valid.
 The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
  * @author yue
  *
  */
 public class ValidParentheses {
+	public static void main(String[] args) {
+		String s = "{[()]}";
+		System.out.println(isValid(s));
+	}
 
-	public boolean isValid(String s) {
+	public static boolean isValid(String s) {
         String left = "({[";
         Stack<Character> stack = new Stack<>();
         
@@ -30,7 +34,7 @@ public class ValidParentheses {
         return stack.isEmpty();
     }
 	
-	private boolean is_valid(char c1, char c2){
+	private static boolean is_valid(char c1, char c2){
 		return (c1 == '(' && c2 == ')') || (c1 == '{' && c2 == '}') || (c1 == '[' && c2 == ']');
 	}
 }

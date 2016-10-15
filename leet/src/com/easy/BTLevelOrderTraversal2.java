@@ -6,8 +6,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import com.easy.BTLevelOrderTraversal.TreeNode;
-
+/**
+ * Given a binary tree, return the bottom-up level order traversal of its nodes' values.
+ * (i.e. from left to right, level by level from leaf to root)
+ * @author yue
+ *
+ */
 public class BTLevelOrderTraversal2 {
 	private class TreeNode {
 		int val;

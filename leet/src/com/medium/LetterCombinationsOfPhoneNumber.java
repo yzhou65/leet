@@ -40,6 +40,7 @@ public class LetterCombinationsOfPhoneNumber {
         helper(map, digits, sb, result);
         return result;
     }
+	
 	private void helper(Map<Character, char[]> map, String digits, StringBuilder sb, List<String> result) {
 		if (sb.length() == digits.length()) {
 			result.add(sb.toString());
@@ -53,6 +54,7 @@ public class LetterCombinationsOfPhoneNumber {
 		}
 	}
 	
+	/*
 	private void helper2(Map<Character, char[]> map, String digits, StringBuilder sb, List<String> result) {
 		if (sb.length() == digits.length()) {
 			result.add(sb.toString());
@@ -65,4 +67,5 @@ public class LetterCombinationsOfPhoneNumber {
 			sb.deleteCharAt(sb.length() - 1);
 		}
 	}
+	*/
 }

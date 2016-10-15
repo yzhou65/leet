@@ -1,5 +1,10 @@
 package com.easy;
 
+/**
+ * Delete a node in a singly linked list, given only access to that node
+ * @author yue
+ *
+ */
 public class DeleteNodeInLinkedList {
 
 	public void deleteNode(ListNode node) {
