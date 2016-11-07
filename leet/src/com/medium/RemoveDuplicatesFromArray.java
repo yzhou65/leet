@@ -1,4 +1,4 @@
-package com.easy;
+package com.medium;
 
 /**
  * Given a sorted array, remove the duplicates in place such that each element appear 
@@ -14,13 +14,18 @@ It doesn't matter what you leave beyond the new length.
  */
 public class RemoveDuplicatesFromArray {
 
-	public int removeDuplicates(int[] nums) {
+	public static void main(String[] args) {
+		int[] nums = {1,1,2,3,5,5};
+		System.out.println(removeDuplicates(nums));
+	}
+	
+	public static int removeDuplicates(int[] nums) {
         if (nums == null || nums.length == 0) {
 			return 0;
 		}
         
         int size = 0;
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 1; i < nums.length; i++) {
 			if (nums[i] != nums[size]) {
 				nums[++size] = nums[i];
 			}

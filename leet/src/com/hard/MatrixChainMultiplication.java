@@ -4,6 +4,7 @@ public class MatrixChainMultiplication {
     
  // Driver program to test above function
  	public static void main(String args[]) {
+ 		// 9 6 3 21 11 5 50
  		int arr[] = new int[] {9, 6, 3, 21, 11, 5, 50};
 
  		System.out.println("\nOptimal chain needs " + matrixChainOrder(arr) + " multiplications");
@@ -28,6 +29,14 @@ public class MatrixChainMultiplication {
             }
         }
         printOptimalParenthesizations(s, 0, s.length - 1);
+        
+        System.out.println();
+        for (int i = 0; i < m.length; i++) {
+			for (int j = 0; j < m[0].length; j++) {
+				System.out.print(m[i][j] + "_" + s[i][j] + " ");
+			}
+			System.out.println();
+		}
         
         return m[0][n - 1];
     }
